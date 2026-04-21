@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <title>Restaurant</title>
 </head>
@@ -11,9 +12,7 @@
 <body>
     <header>
         <nav class="nav-container">
-            <div class="logo">
-                <img src="./img/.png" alt="logo">
-            </div>
+            <h2 class="logo">L'Artigianale</h2>
             <div class="navigation">
                 <a class="navi" href="#">Home</a>
                 <a class="navi" href="#">About</a>
@@ -35,8 +34,8 @@
                         secret in the sauce.</p>
                 </div>
             </div>
-            <div class="video">
-                <video src="./video/hero.mp4" autoplay muted loop></video>
+            <div class="container-video">
+                <video class="video" src="./video/transition-flow.mp4" autoplay muted controls loop></video>
                 <p class="video-title">Watch the Video</p>
             </div>
         </div>
@@ -44,8 +43,88 @@
     </header>
 
     <main>
-        <section>
+        <section class="menu-preview">
+            <div class="container-menu-title">
+                <div class="container-title">
+                    <p class="menu-slogan">SELECTION OF THE SEASON</p>
+                    <h2 class="menu-title">I Nostri Piatti</h2>
+                </div>
+                <p class="menu-description">Our menu changes with the rhythm of the seasons,
+                    honoring the freshest ingredients available.
+                </p>
+            </div>
 
+
+            <div class="container-menu-items">
+                <div class="feature-dish salmon">
+
+                    <div class="saucer-content">
+                        <h3 class="saucer-tittle">Salmone alla presto</h3>
+                        <p class="price">€12.99</p>
+                        <p class="saucer-descripcion">Salmone bagnato con salsa della casa ed erbe particolari per
+                            donare un
+                            sapore caldo e fresco</p>
+                    </div>
+
+                    <img src="img/salmon.jpg" alt="salmon" class="saucer-img">
+                </div>
+
+                <div class="feature-dish eggs">
+                    <div class="saucer-content">
+                        <h3 class="saucer-tittle">Uova alla Romana</h3>
+                        <p class="price">€8.99</p>
+                        <p class="saucer-descripcion">Salmone bagnato con salsa della casa ed erbe particolari per
+                            donare un
+                            sapore caldo e fresco</p>
+                    </div>
+
+
+
+                    <img src="img/huevos.jpg" alt="salmon" class="saucer-img img-eggs">
+                </div>
+
+                <div class="feature-dish pasta">
+                    <div class="saucer-content">
+                        <h3 class="saucer-tittle">Pasta alla Carbonara</h3>
+                        <p class="saucer-descripcion">Pasta con uova, pancetta e pecorino romano per un sapore autentico
+                        </p>
+                        <p class="price">€14.99</p>
+                    </div>
+
+                </div>
+
+                <div class="feature-dish Lasagna">
+                    <div class="saucer-content">
+                        <h3 class="saucer-tittle dest">Lasagna alla Bolognese</h3>
+                        <p class="saucer-descripcion white">Layered pasta with rich meat sauce and creamy béchamel with
+                            a touch of nutmeg
+                        </p>
+                        <p class="price cal">€16.99</p>
+                    </div>
+
+                </div>
+
+                <div class="feature-dish waffle">
+                    <div class="saucer-content">
+                        <h3 class="saucer-tittle ">Waffle alla Nutella</h3>
+                        <p class="saucer-descripcion">Crispy waffle topped with creamy Nutella and fresh strawberries
+                            with a hint of vanilla for a sweet indulgence
+                        </p>
+                        <p class="price">€11.99</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container-quote">
+            <h2 class="distinctive">99</h2>
+            <div class="quote-content">
+                <h3 class="quote">"Cooking is an act of love, a gift, a way
+                    of sharing with others the little secrets
+                    that are simmering on the fire."</h3>
+                <p class="author">-  Sophia Loren</p>
+            </div>
         </section>
     </main>
 </body>
