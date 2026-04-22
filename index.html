@@ -14,11 +14,11 @@
         <nav class="nav-container">
             <h2 class="logo">L'Artigianale</h2>
             <div class="navigation">
-                <a class="navi" href="#">Home</a>
-                <a class="navi" href="#">About</a>
-                <a class="navi" href="#">Menu</a>
-                <a class="navi" href="#">Contact</a>
-                <a class="navi" href="#">Reservate now</a>
+                <a class="navi" href="#home">Home</a>
+                <a class="navi" href="/about.html">About</a>
+                <a class="navi" href="/menu.html">Menu</a>
+                <a class="navi" href="#mostrar">Contact</a>
+                <a class="navi" href="#reservation">Reservate now</a>
             </div>
         </nav>
         <div class="section-hero">
@@ -145,8 +145,7 @@
 
                     <div class="campo">
                         <label class="label-form">Phone</label>
-                        <input class="highlight" type="number" id="number" name="number"
-                            placeholder="XXXXXXXXXX" />
+                        <input class="highlight" type="number" id="number" name="number" placeholder="XXXXXXXXXX" />
                     </div>
 
                     <div class="campo">
@@ -188,35 +187,42 @@
             <div class="info maps">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.485812705048!2d-74.82386072407054!3d11.002130254988188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42da7066a9f45%3A0x54d4f06b7200ba25!2sLa%20Vid%20Pizza!5e0!3m2!1ses-419!2sco!4v1776781037275!5m2!1ses-419!2sco"
-                    width="100%" height="100%" style="border:1px solid #ccc;  align-self: center; border-radius: 0 8px 8px 0;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    width="100%" height="100%"
+                    style="border:1px solid #ccc;  align-self: center; border-radius: 0 8px 8px 0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <section class="contact">
 
-            <div>
-                <img class="asao" src="./img/asado.jpg" alt="asado">
-            </div>
-            <div class= "info reservation">
+            <img class="asao" src="./img/asado.jpg" alt="asado">
+
+            <div class="info reservation" id="reservation">
                 <h2 class="contact-title">Reservation</h2>
                 <form>
                     <div class="campo">
                         <label class="label-form">People</label>
-                        <input class= "highlight" type="number" id="number" name="number" />
+                        <input class="highlight" type="number" id="number" name="number" min="1" max="30" />
                     </div>
                     <div class="campo">
                         <label class="label-form">Date</label>
-                        <input class="highlight" type="date" id="date" name="date"/>
+                        <input class="highlight" type="date" id="date" name="date" />
                     </div>
                     <div class="campo">
                         <label class="label-form">Message</label>
-                        <textarea class="highlight" type="text" id="text" name="text"  placeholder="Its for a birthday.."></textarea>
+                        <textarea class="highlight" type="text" id="text" name="text"
+                            placeholder="Its for a birthday.."></textarea>
                     </div>
                     <button class="highlight btn">Make reservation</button>
                 </form>
             </div>
         </section>
     </main>
+    <footer class="site-footer">
+        <p class="footer-logo">L'Artigianale</p>
+        <p class="footer-text">Cra. 46 # 85-15, C.C. Garden Mall &nbsp;·&nbsp; +57 318 763 0851 &nbsp;·&nbsp;
+            lavid@gmail.com</p>
+        <p class="footer-text footer-copy">© 2025 L'Artigianale. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

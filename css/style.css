@@ -63,6 +63,7 @@ header {
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 .navi::after {
@@ -437,7 +438,7 @@ main {
 
 .call {
     background-color: var(--color-primary);
-    border-radius: 0 ;
+    border-radius: 0;
 }
 
 .info-contact {
@@ -468,7 +469,7 @@ main {
 }
 
 .btn {
-    background-color: rgb(252,199,66);
+    background-color: var(--color-background);
     color: var(--color-text-1);
     font-family: var(--font-family-2);
     font-size: 1rem;
@@ -501,8 +502,9 @@ main {
     margin: 1.5rem 0;
 }
 
-.iconos{
-    width: 2rem; height: 2rem;
+.iconos {
+    width: 2rem;
+    height: 2rem;
 }
 
 .text-icon {
@@ -518,14 +520,47 @@ main {
     padding: 0;
     border: 0;
 }
-.reservation{
+
+.reservation {
     width: 100%;
     padding: 0.5rem 1rem;
     border-radius: 0 8px 8px 0;
 }
-.asao{
+
+.asao {
     width: 20rem;
     height: 28rem;
     border-radius: 8px 0 0 8px;
     align-self: center;
+}
+
+
+.footer-logo {
+    font-family: var(--font-family);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.footer-text {
+    font-family: var(--font-family-2);
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.4rem;
+}
+
+.site-footer {
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 3rem 40px;
+    text-align: center;
 }
