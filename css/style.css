@@ -432,6 +432,7 @@ main {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     color: var(--color-primary);
+    padding-top: 1rem;
 }
 
 .call {
@@ -467,7 +468,7 @@ main {
 }
 
 .btn {
-    background-color: var(--color-background);
+    background-color: rgb(252,199,66);
     color: var(--color-text-1);
     font-family: var(--font-family-2);
     font-size: 1rem;
@@ -516,4 +517,15 @@ main {
 .maps {
     padding: 0;
     border: 0;
+}
+.reservation{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0 8px 8px 0;
+}
+.asao{
+    width: 20rem;
+    height: 28rem;
+    border-radius: 8px 0 0 8px;
+    align-self: center;
 }
