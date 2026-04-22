@@ -364,7 +364,7 @@ main {
 
 .salmon {
     grid-area: area1;
-    background: var(--color-background-2);
+    background: #fffdfa;
 }
 
 .eggs {
@@ -576,17 +576,22 @@ main {
     border: 0;
 }
 
+.cont-book {
+    justify-content: center;
+}
+
 .reservation {
-    width: 100%;
+    width: 30%;
     padding: 0.5rem 1rem;
     border-radius: 0 8px 8px 0;
 }
 
 .asao {
-    width: 20rem;
+    width: 40%;
     height: 28rem;
     border-radius: 8px 0 0 8px;
-    align-self: center;
+    min-height: 0;
+    object-fit: cover;
 }
 
 
@@ -621,10 +626,24 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+    .theme-switch {
+        height: 1rem;
+        width: 2rem;
+        margin-left: 4px;
+    }
 
+    .slider::after {
+        font-size: .4rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
 
     .navi {
         font-size: .9rem;
+        margin: 6px;
+
     }
 
     .hero-content {
@@ -638,11 +657,12 @@ main {
 
     .hero-title {
         font-size: 4rem;
+        width: fit-content;
     }
 
     .hero-description {
         font-size: 1rem;
-        width: 60ch;
+        width: 40ch;
     }
 
     .container-video {
@@ -703,8 +723,18 @@ main {
         margin: 14px 0 8px;
     }
 
-    .rese {
+    .cont-book {
         flex-direction: row;
+    }
+
+    .reservation {
+        width: 35%;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .asao {
+        width: 45%;
+        height: auto;
     }
 
     .campo {
@@ -712,7 +742,27 @@ main {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+
+    .theme-switch {
+        height: 1rem;
+        width: 2rem;
+        margin-left: 4px;
+    }
+
+    .slider::after {
+        font-size: .4rem;
+    }
+
+    .navi {
+        margin: 6px;
+        font-size: .6rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        width: 30ch;
+    }
 
     .nav-container {
         padding: 14px 20px;
@@ -720,5 +770,28 @@ main {
 
     .logo {
         font-size: 1rem;
+    }
+
+    .btn {
+        font-size: .6rem;
+    }
+
+    .cont-book {
+        padding: 0;
+    }
+
+    .asao {
+        width: 50%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .reservation {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .highlight {
+        font-size: .8rem;
     }
 }

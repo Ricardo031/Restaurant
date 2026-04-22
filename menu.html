@@ -19,7 +19,11 @@
                 <a class="navi" href="about.html">About</a>
                 <a class="navi active" href="menu.html">Menu</a>
                 <a class="navi" href="index.html#mostrar">Contact</a>
-                <a class="navi" href="index.html#reservation">Reservate now</a>
+                <a class="navi" href="index.html#reservation">Reservate</a>
+                <label class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
             </div>
         </nav>
 
@@ -354,6 +358,26 @@
             lavid@gmail.com</p>
         <p class="footer-text footer-copy">© 2025 L'Artigianale. All rights reserved.</p>
     </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Recordar preferencia al recargar
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            toggle.checked = true;
+        }
+    </script>
 
 </body>
 

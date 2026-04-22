@@ -19,10 +19,10 @@
                 <a class="navi active" href="about.html">About</a>
                 <a class="navi" href="menu.html">Menu</a>
                 <a class="navi" href="index.html#mostrar">Contact</a>
-                <a class="navi" href="index.html#reservation">Reservate now</a>
+                <a class="navi" href="index.html#reservation">Reservate</a>
                 <label class="theme-switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider"></span>
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
                 </label>
             </div>
         </nav>
@@ -30,7 +30,7 @@
         <div class="page-hero about-hero">
             <div class="page-hero-content">
                 <p class="slogan">Since 1987 · Rome, Italy</p>
-                <h1 class="page-hero-title">La Nostra Storia</h1>
+                <h1 class="hero-title">La Nostra Storia</h1>
                 <p class="hero-description">Three generations of passion, tradition, and the finest
                     ingredients — brought together at one table.</p>
             </div>
@@ -154,5 +154,25 @@
     </footer>
 
 </body>
+
+<script>
+    const toggle = document.getElementById('theme-toggle');
+
+    toggle.addEventListener('change', () => {
+        if (toggle.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Recordar preferencia al recargar
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggle.checked = true;
+    }
+</script>
 
 </html>
