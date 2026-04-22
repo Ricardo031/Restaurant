@@ -521,19 +521,23 @@ main {
     border: 0;
 }
 
+.cont-book{
+    justify-content: center;
+}
+
 .reservation {
-    width: 100%;
+    width: 30%;
     padding: 0.5rem 1rem;
     border-radius: 0 8px 8px 0;
 }
 
 .asao {
-    width: 20rem;
+    width: 40%;
     height: 28rem;
     border-radius: 8px 0 0 8px;
-    align-self: center;
+    min-height: 0;
+    object-fit: cover;
 }
-
 
 .footer-logo {
     font-family: var(--font-family);
