@@ -16,11 +16,62 @@
     --color-text-1: #151515;
     --color-text-2: #333;
     --color-text-3: #ebebeb;
+    --color-text-hero: #ebebeb;
+    --color-text-menu: #151515;
+    --color-text-lasagna: #ebebeb;
 
     --font-family: 'Noto Serif', sans-serif;
     --font-family-2: 'Manrope', serif;
 }
+[data-theme="dark"] {
+    --color-background: #1a1a1a;
+    --color-background-2: #111010;
+    --color-text-1: #ffffff;
+    --color-text-2: #cfcfcf;
+    --color-text-3: #272626;
+    --color-text-hero: #ebebeb;
+    --color-primary: #4caf50;
+    --color-text-menu: #151515;
+    --color-text-lasagna: #151515;
 
+}
+
+.theme-switch {
+    position: relative;
+    width: 52px;
+    height: 28px;
+    margin-left: 16px;
+}
+
+.theme-switch input { display: none; }
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider::after {
+    content: "🌙";
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #333;
+}
+
+input:checked + .slider::after {
+    content: "☀️";
+    left: 28px;
+}
 header {
     display: flex;
     flex-direction: column;
@@ -56,7 +107,7 @@ header {
 
 .navi {
     margin: 0 10px;
-    color: var(--color-text-1);
+    color: var(--color-text-menu);
     text-decoration: none;
     font-family: var(--font-family-2);
     font-size: 1.1rem;
@@ -73,12 +124,12 @@ header {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--color-text-1);
+    background-color: var(--color-text-menu);
     transition: all 0.2s ease-in-out;
 }
 
 .navi:hover {
-    color: var(--color-text-1);
+    color: var(--color-text-menu);
 }
 
 .navi:hover::after {
@@ -93,7 +144,7 @@ header {
     width: 100%;
     height: 80vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-        url(/img/hero.jpg);
+        url(../img/hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,7 +174,7 @@ header {
 }
 
 .hero-title {
-    color: var(--color-text-3);
+    color: var(--color-text-hero);
     font-family: var(--font-family);
     font-size: 6rem;
     font-style: italic;
@@ -139,7 +190,7 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-    color: var(--color-text-3);
+    color: var(--color-text-hero);
 }
 
 .container-video {
@@ -248,7 +299,7 @@ main {
     align-self: stretch;
     grid-template-areas: "area1 area1 area1 area1 area1 area2 area2 area2 area2 area2"
         "area3 area3 area3 area4 area4 area4 area5 area5 area5 area5";
-    grid-template-rows: 650px 230px;
+    grid-template-rows: 650px auto;
     grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
@@ -291,7 +342,7 @@ main {
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-    color: var(--color-text-1);
+    color: var(--color-text-menu);
 }
 
 .saucer-img {
@@ -339,7 +390,7 @@ main {
 }
 
 .white {
-    color: var(--color-text-3);
+    color: var(--color-text-lasagna);
 }
 
 .cal {
