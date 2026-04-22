@@ -20,8 +20,8 @@
                 <a class="navi" href="#mostrar">Contact</a>
                 <a class="navi" href="#reservation">Reservate now</a>
                 <label class="theme-switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider"></span>
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
                 </label>
             </div>
         </nav>
@@ -196,7 +196,7 @@
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact rese">
 
             <img class="asao" src="./img/asado.jpg" alt="asado">
 
@@ -228,24 +228,24 @@
         <p class="footer-text footer-copy">© 2025 L'Artigianale. All rights reserved.</p>
     </footer>
     <script>
-    const toggle = document.getElementById('theme-toggle');
+        const toggle = document.getElementById('theme-toggle');
 
-    toggle.addEventListener('change', () => {
-        if (toggle.checked) {
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Recordar preferencia al recargar
+        if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'light');
+            toggle.checked = true;
         }
-    });
-
-    // Recordar preferencia al recargar
-    if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggle.checked = true;
-    }
-</script>
+    </script>
 </body>
 
 </html>

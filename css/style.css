@@ -23,6 +23,7 @@
     --font-family: 'Noto Serif', sans-serif;
     --font-family-2: 'Manrope', serif;
 }
+
 [data-theme="dark"] {
     --color-background: #1a1a1a;
     --color-background-2: #111010;
@@ -43,7 +44,9 @@
     margin-left: 16px;
 }
 
-.theme-switch input { display: none; }
+.theme-switch input {
+    display: none;
+}
 
 .slider {
     position: absolute;
@@ -64,14 +67,15 @@
     transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #333;
 }
 
-input:checked + .slider::after {
+input:checked+.slider::after {
     content: "☀️";
     left: 28px;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -614,4 +618,107 @@ main {
     gap: 0.6rem;
     padding: 3rem 40px;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .navi {
+        font-size: .9rem;
+    }
+
+    .hero-content {
+        padding: 0 1.5rem;
+
+    }
+
+    .slogan {
+        font-size: .7rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        width: 60ch;
+    }
+
+    .container-video {
+        display: none;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .container-menu-items {
+        grid-template-areas: "area1 area1 area1 area1  area2 area2 area2 area2"
+            "area3 area3 area3 area3 area4 area4 area4 area4"
+            "area5 area5 area5 area5 area5 area5 area5 area5"
+        ;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1.5rem;
+    }
+
+    .menu-preview {
+        gap: 3rem;
+    }
+
+    .saucer-tittle {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .saucer-descripcion {
+        font-size: 1rem;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .info-contact {
+        margin-top: 10px;
+    }
+
+    .info {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .call {
+        border-radius: 0;
+    }
+
+    .label-form {
+        font-size: 1rem;
+    }
+
+    .otro {
+        margin: 14px 0 8px;
+    }
+
+    .rese {
+        flex-direction: row;
+    }
+
+    .campo {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-container {
+        padding: 14px 20px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
 }
